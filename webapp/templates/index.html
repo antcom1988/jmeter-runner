@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JMeter Runner</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <main>
+    <header><h1>JMeter Runner</h1><p>Upload a test plan, run it, then open its live result report.</p></header>
+    <section class="card">
+      <h2>1. Upload test plan</h2>
+      <form id="upload-form"><input id="file" name="file" type="file" accept=".jmx" required><button>Upload .jmx</button></form>
+      <p id="upload-message" class="message"></p>
+    </section>
+    <section class="card">
+      <h2>2. Run JMeter</h2>
+      <div class="row"><select id="plan"><option value="">Loading test plans…</option></select><button id="run" type="button">Run test</button></div>
+      <p class="hint">Runs JMeter in non-GUI mode. Reports and logs remain in the mounted workspace.</p>
+    </section>
+    <section class="card">
+      <h2>3. Results</h2>
+      <div id="runs"><p class="hint">No runs yet.</p></div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

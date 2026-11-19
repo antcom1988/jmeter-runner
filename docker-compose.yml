@@ -1,0 +1,12 @@
+services:
+  jmeter-web:
+    build:
+      context: .
+    image: jmeter-web-runner:latest
+    container_name: jmeter-web
+    ports:
+      # Deliberately local-only: this dashboard has no authentication.
+      - "127.0.0.1:8383:8080"
+    volumes:
+      - ./workspace:/srv
+    restart: unless-stopped

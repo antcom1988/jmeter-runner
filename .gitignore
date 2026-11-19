@@ -1,0 +1,8 @@
+# Local test plans, logs, results, and reports
+workspace/
+
+# Local Python environment and test caches
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
